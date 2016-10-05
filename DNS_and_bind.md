@@ -1,8 +1,7 @@
+
 DNS and BIND
 ============
-
 [TOC]
-
 # 1. 基本概念
 - DNS: Domain Name Service，（C/S, 53/udp, 53/tcp），应用层协议；
 - BIND：Bekerley Internat Name Domain, ISC （www.isc.org）
