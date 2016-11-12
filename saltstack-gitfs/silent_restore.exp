@@ -1,0 +1,11 @@
+#!/usr/bin/expect
+# if not timeout,command will can not execute completelly
+set timeout 600
+set TIMESTAMP [lindex $argv 0]
+spawn gitlab-rake gitlab:backup:restore BACKUP=$TIMESTAMP
+expect "Do you want to continue (yes/no)?"
+send "yes\r"
+expect "Do you want to continue (yes/no)?"
+send "yes\r"
+# eof used for crontab,if not,crontab not execute.
+expect eof
